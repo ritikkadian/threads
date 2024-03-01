@@ -1,7 +1,11 @@
+import { ClerkProvider, UserButton } from "@clerk/nextjs";
+
 export default function Home() {
   return (
-    <main>
-      <div>Threads</div>
-    </main>
+    <ClerkProvider>
+      <div>
+        <UserButton afterSignOutUrl="/" />
+      </div>
+    </ClerkProvider>
   );
 }
